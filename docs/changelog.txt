@@ -1,0 +1,10 @@
+Ikarus Set 6 Fix Changelog
+=========================
+0.0.2 (2024-07-21)
+-------------------------
+Add: Ikarus 260 1984 (Local)
+Basic language file structure and vehicle cost table
+
+0.0.1 (2024-07-20)
+-------------------------
+Add: Ikarus 260 1971

@@ -1,0 +1,143 @@
+##grflangid 0x01
+
+STR_GRF_NAME        :Ikarus Set 6 Fix {VERSION_STRING}
+STR_GRF_DESC        :Fix Ikarus Set 6 to prevent bugs with some industry sets.
+STR_GRF_URL         :https://www.tt-forums.net/viewtopic.php?t=90219
+
+STR_PARAM_LOADING_SPEED         :Loading Speed
+STR_PARAM_LOADING_SPEED_DESC    :Adjust vehicle loading speed. Default is 100%.
+
+STR_PARAM_PURCHASE_COST         :Purchase costs
+STR_PARAM_PURCHASE_COST_DESC    :Adjust vehicle purchase costs. Default is 50%.
+STR_PARAM_RUNNING_COST          :Running costs
+STR_PARAM_RUNNING_COST_DESC     :Adjust vehicle running costs. Default is 50%.
+
+STR_PARAM_NUM                   :{COMMA}%
+
+STR_PARAM_CARGO_DECAY           :Cargo Age Period
+STR_PARAM_CARGO_DECAY_DESC      :Adjust cargo age period of coaches and wagons. "Long" is "Standard" doubled, while "Very Long" is "Long" doubled. Even in "Standard" mode, cargo age period varies.
+STR_PARAM_STANDARD              :Standard
+STR_PARAM_LONG                  :Long
+STR_PARAM_VERY_LONG             :Very Long
+
+STR_USED_WITH_DYNAMIC_ENGINES   :This GRF needs dynamic_engines to be turned on. Open console, and type "setting dynamic_engines 1".
+
+
+STR_DESC_2                  :{STRING}{}{STRING}
+STR_DESC_3                  :{STRING}{}{STRING}{}{STRING}
+STR_DESC_4                  :{STRING}{}{STRING}{}{STRING}{}{STRING}
+STR_DESC_5                  :{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}
+
+STR_NAME_IKARUS_260_1971            :Ikarus 260 {SILVER}1971
+STR_NAME_IKARUS_260_LOCAL_1984      :Ikarus 260 {SILVER}1984 {LTBLUE}Local
+STR_NAME_IKARUS_260_1998            :Ikarus 260 {SILVER}1998
+STR_NAME_IKARUS_260_CNG_2002        :Ikarus 260 CNG {SILVER}2002
+STR_NAME_IKARUS_266_1972            :Ikarus 266 {SILVER}1972
+STR_NAME_IKARUS_260_REGIONAL_1984   :Ikarus 260 {SILVER}1984 {YELLOW}Regional
+STR_NAME_IKARUS_256_1972            :Ikarus 256 {SILVER}1972
+STR_NAME_IKARUS_256_1977            :Ikarus 256 {SILVER}1977
+STR_NAME_IKARUS_256_1998            :Ikarus 256 {SILVER}1998
+STR_NAME_IKARUS_255_1971            :Ikarus 255 {SILVER}1971
+STR_NAME_IKARUS_254_TOURIST_1975    :Ikarus 254 {SILVER}1975
+STR_NAME_IKARUS_283_1988            :Ikarus 283 {SILVER}1988
+STR_NAME_IKARUS_250_1967            :Ikarus 250 {SILVER}1967
+STR_NAME_IKARUS_250_1970            :Ikarus 250 {SILVER}1970
+STR_NAME_IKARUS_280_LOCAL_1971      :Ikarus 280 {SILVER}1971 {BLUE}Local
+STR_NAME_IKARUS_280_LOCAL_1984      :Ikarus 280 {SILVER}1984 {BLUE}Local
+STR_NAME_IKARUS_280_1998            :Ikarus 280 {SILVER}1998
+STR_NAME_IKARUS_280_CNG_1999        :Ikarus 280 CNG {SILVER}1999
+STR_NAME_IKARUS_210_1969            :Ikarus 210 {SILVER}1969
+STR_NAME_IKARUS_211_1975            :Ikarus 211 {SILVER}1975
+STR_NAME_IKARUS_212_1976            :Ikarus 212 {SILVER}1976
+STR_NAME_IKARUS_280_REGIONAL_1971   :Ikarus 280 {SILVER}1971 {YELLOW}Regional
+STR_NAME_IKARUS_280_REGIONAL_1984   :Ikarus 280 {SILVER}1984 {YELLOW}Regional
+STR_NAME_IKARUS_292_1988            :Ikarus 292 {SILVER}1988
+STR_NAME_MAVAG_TR_5_1947            :Mávag Tr 5 {SILVER}1947
+STR_NAME_MAVAG_TR_3_5_1948          :Mávag Tr 3,5 {SILVER}1948
+STR_NAME_IKARUS_30_1951             :Ikarus 30 {SILVER}1951
+STR_NAME_IKARUS_556_1964            :Ikarus 556 {SILVER}1964
+STR_NAME_IKARUS_180_1964            :Ikarus 180 {SILVER}1964
+STR_NAME_MAVAUT_IKARUS_556_1968     :Mávaut-Ikarus 556 {SILVER}1968
+STR_NAME_IKARUS_557_1965            :Ikarus 557 {SILVER}1965
+STR_NAME_IKARUS_60_1952             :Ikarus 60 {SILVER}1952
+STR_NAME_IKARUS_60_WITH_TRAILER_1955:Ikarus 60 with Trailer {SILVER}1955
+STR_NAME_IKARUS_ITC_600_1960        :Ikarus ITC 600 {SILVER}1960
+STR_NAME_IKARUS_601_REGIONAL_1952   :Ikarus 601 {SILVER}1960 {YELLOW}Regional
+STR_NAME_IKARUS_601_INTERCITY_1952  :Ikarus 601 {SILVER}1960 {WHITE}Intercity
+STR_NAME_IKARUS_ITC_601_1962        :Ikarus ITC 601 {SILVER}1962
+STR_NAME_IKARUS_31_1956             :Ikarus 31 {SILVER}1956
+STR_NAME_IKARUS_620_1958            :Ikarus 620 {SILVER}1958
+STR_NAME_IKARUS_630_1958            :Ikarus 630 {SILVER}1958
+STR_NAME_IKARUS_622_1961            :Ikarus 622 {SILVER}1961
+STR_NAME_IKARUS_622_1962            :Ikarus 622 {SILVER}1962
+STR_NAME_IKARUS_55_1953             :Ikarus 55 {SILVER}1953
+STR_NAME_IKARUS_66_1952             :Ikarus 66 {SILVER}1952
+STR_NAME_IKARUS_66_1955             :Ikarus 66 {SILVER}1955
+STR_NAME_IKARUS_263_1988            :Ikarus 263 {SILVER}1988
+STR_NAME_IKARUS_284_1984            :Ikarus 284 {SILVER}1984
+STR_NAME_IKARUS_282_1977            :Ikarus 282 {SILVER}1977
+STR_NAME_IKARUS_405_1993            :Ikarus 405 {SILVER}1993
+STR_NAME_IKARUS_415_1984            :Ikarus 415 {SILVER}1984
+STR_NAME_IKARUS_415_1992            :Ikarus 415 {SILVER}1992
+STR_NAME_IKARUS_415_1996            :Ikarus 415 {SILVER}1996
+STR_NAME_IKARUS_411_1993            :Ikarus 411 {SILVER}1993
+STR_NAME_IKARUS_412_1999            :Ikarus 412 {SILVER}1999
+STR_NAME_IKARUS_412_1996            :Ikarus 412 {SILVER}1996
+STR_NAME_IKARUS_435_REGIONAL_1994   :Ikarus 435 {SILVER}1994 {YELLOW}Regional
+STR_NAME_IKARUS_435_1985            :Ikarus 435 {SILVER}1985
+STR_NAME_IKARUS_435_LOCAL_1994      :Ikarus 435 {SILVER}1994 {LTBLUE}Local
+STR_NAME_IKARUS_417_1995            :Ikarus 417 {SILVER}1995
+STR_NAME_IKARUS_417_1994            :Ikarus 417 {SILVER}1994
+STR_NAME_IKARUS_417_2000            :Ikarus 417 {SILVER}2000
+STR_NAME_IKARUS_417GG_2020          :Ikarus 417GG {SILVER}2020
+STR_NAME_IKARUS_315_1992            :Ikarus 315 {SILVER}1992
+STR_NAME_IKARUS_350_1987            :Ikarus 350 {SILVER}1987
+STR_NAME_IKARUS_396_1985            :Ikarus 396 {SILVER}1985
+STR_NAME_IKARUS_955_1999            :Ikarus 955 {SILVER}1999
+STR_NAME_IKARUS_EAG_E95             :Ikarus EAG E95 "Hawk" {SILVER}1993
+STR_NAME_IKARUS_EAG_E98             :Ikarus EAG E98 HD "Falcon" {SILVER}1993
+STR_NAME_IKARUS_EAG_397             :Ikarus EAG 397 SHD {SILVER}1994
+STR_NAME_IKARUS_EAG_E99             :Ikarus EAG E99 DD "Eagle" {SILVER}1995
+STR_NAME_IKARUS_EAG_E13             :Ikarus EAG E13 "Swallow" {SILVER}1998
+STR_NAME_IKARUS_EAG_E91             :Ikarus EAG E91 "Runner" {SILVER}1998
+STR_NAME_IKARUS_EAG_E92             :Ikarus EAG E92 {SILVER}1996
+STR_NAME_IKARUS_EAG_E94             :Ikarus EAG E94 "Swan" {SILVER}1994
+STR_NAME_IKARUS_EAG_E94F            :Ikarus EAG E94F {SILVER}2002
+STR_NAME_IKARUS_EAG_E94LF           :Ikarus EAG E94LF {SILVER}2001
+STR_NAME_IKARUS_EAG_E94G            :Ikarus EAG E94G "Stork" {SILVER}1997
+
+STR_LIVERY_1                :Livery 1
+STR_LIVERY_2                :Livery 2
+
+STR_USAGE_LOW_LOCAL         :{BLACK}Usage: {LTBLUE}Low-Traffic Local Routes
+STR_USAGE_LOCAL             :{BLACK}Usage: {LTBLUE}Local Routes
+STR_USAGE_LOCAL_SUBURBAN    :{BLACK}Usage: {LTBLUE}Local {WHITE}/ {GREEN}Suburban {LTBLUE}Routes
+STR_USAGE_SUBURBAN          :{BLACK}Usage: {GREEN}Suburban Routes
+STR_USAGE_LOW_REGIONAL      :{BLACK}Usage: {YELLOW}Low-Traffic Regional Routes
+STR_USAGE_REGIONAL          :{BLACK}Usage: {YELLOW}Regional Routes
+STR_USAGE_SHORT_INTERCITY   :{BLACK}Usage: {YELLOW}Short Intercity Routes
+STR_USAGE_LOW_INTERCITY     :{BLACK}Usage: {WHITE}Low-Traffic Intercity Routes
+STR_USAGE_INTERCITY         :{BLACK}Usage: {WHITE}Intercity Routes
+STR_USAGE_LONG              :{BLACK}Usage: {WHITE}Long-Distance Routes
+STR_USAGE_COACH             :{BLACK}Usage: {WHITE}Coach
+STR_USAGE_INTERNATIONAL     :{BLACK}Usage: {WHITE}International Routes
+STR_USAGE_TOURIST           :{BLACK}Usage: {WHITE}Tourist Bus
+STR_USAGE_EXPERIMENTAL      :{BLACK}Note: It is only an {ORANGE}experimental {BLACK}bus for no real purpose.
+
+STR_RELDEC_VERY_SLOW        :{BLACK}Reliability Decay Speed: {WHITE}Very Slow ({COMMA})
+STR_RELDEC_SLOW             :{BLACK}Reliability Decay Speed: {GREEN}Slow ({COMMA})
+STR_RELDEC_MEDIUM           :{BLACK}Reliability Decay Speed: {YELLOW}Medium ({COMMA})
+STR_RELDEC_FAST             :{BLACK}Reliability Decay Speed: {ORANGE}Fast ({COMMA})
+STR_RELDEC_VERY_FAST        :{BLACK}Reliability Decay Speed: {RED}Very Fast ({COMMA})
+
+STR_COMFORT_VERY_LOW        :{BLACK}Comfort: {RED}Very Low ({COMMA})
+STR_COMFORT_LOW             :{BLACK}Comfort: {ORANGE}Low ({COMMA})
+STR_COMFORT_MEDIUM          :{BLACK}Comfort: {YELLOW}Medium ({COMMA})
+STR_COMFORT_HIGH            :{BLACK}Comfort: {GREEN}High ({COMMA})
+STR_COMFORT_VERY_HIGH       :{BLACK}Comfort: {WHITE}Very High ({COMMA})
+
+STR_LOADING_VERY_SLOW       :{BLACK}Loading Speed: {RED}Very Slow ({COMMA})
+STR_LOADING_SLOW            :{BLACK}Loading Speed: {ORANGE}Slow ({COMMA})
+STR_LOADING_MEDIUM          :{BLACK}Loading Speed: {YELLOW}Medium ({COMMA})
+STR_LOADING_FAST            :{BLACK}Loading Speed: {GREEN}Fast ({COMMA})
+STR_LOADING_VERY_FAST       :{BLACK}Loading Speed: {WHITE}Very Fast ({COMMA})

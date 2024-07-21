@@ -1,0 +1,10 @@
+#include "src/header.pnml"
+#include "src/template.pnml"
+#include "src/cargotable.pnml"
+#include "src/functions.pnml"
+#include "src/vehicleid.pnml"
+
+#include "src/single/ikarus_260_1971.pnml"
+#include "src/single/ikarus_260_local_1984.pnml"
+
+#include "src/vehiclesort.pnml"

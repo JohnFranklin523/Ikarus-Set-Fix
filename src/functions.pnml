@@ -1,0 +1,5 @@
+/* Begin Functions */
+
+// Running cost factor depending on speed
+
+switch (FEAT_ROADVEHS, SELF, runningcostfactor, (1 + current_speed * 5 / max_speed)) {return;}

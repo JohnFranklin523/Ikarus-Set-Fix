@@ -1,0 +1,7 @@
+.nmlcache
+.vscode
+*.grf
+*.nml
+*.tar
+ikarusfix-*
+custom_tags.txt
