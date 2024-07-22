@@ -6,5 +6,11 @@
 
 #include "src/single/ikarus_260_1971.pnml"
 #include "src/single/ikarus_260_local_1984.pnml"
+#include "src/single/ikarus_260_1998.pnml"
+#include "src/single/ikarus_260_cng_2002.pnml"
+#include "src/single/ikarus_266_1972.pnml"
+#include "src/single/ikarus_260_regional_1984.pnml"
+#include "src/single/ikarus_256_1972.pnml"
+#include "src/single/ikarus_256_1977.pnml"
 
 #include "src/vehiclesort.pnml"

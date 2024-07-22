@@ -1,0 +1,65 @@
+// Begin Ikarus_256_1972
+
+spriteset (spriteset_ikarus_256_1972) {
+    template1 (170)
+}
+
+spriteset (spriteset_ikarus_256_1972_loading) {
+    template1 (178)
+}
+
+spriteset (spriteset_ikarus_256_1972_purchase) {
+    template_purchase1 (188)
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_ikarus_256_1972_graphics, vehicle_is_stopped) {
+    1: spriteset_ikarus_256_1972_loading;
+    spriteset_ikarus_256_1972;
+}
+
+item (FEAT_ROADVEHS, ikarus_256_1972) {
+    property {
+        // DON'T CHANGE
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH;
+        climates_available:             ALL_CLIMATES;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        refit_cost:                     0;
+        misc_flags:                     bitmask(ROADVEH_FLAG_AUTOREFIT);
+        cost_factor:                    1;
+        running_cost_factor:            1;
+
+        // DON'T CHANGE for non-articulated buses
+        length:                         8;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        default_cargo_type:             PASS;
+        
+        // Change accordingly
+        name:                           string(STR_NAME_IKARUS_256_1972);
+        introduction_date:              date(1971,1,1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   14;
+        reliability_decay:              12;
+
+        power:                          190 hp;
+        weight:                         10 ton;
+        tractive_effort_coefficient:    0.3;
+        speed:                          102 km/h;
+
+        cargo_capacity:                 45;
+        loading_speed:                  4 << param_loading_speed;
+        cargo_age_period:               256 << param_cargo_decay;
+    }
+    graphics {
+        default:                        switch_ikarus_256_1972_graphics;
+        purchase:                       spriteset_ikarus_256_1972_purchase;
+
+        cost_factor:                    96;
+        running_cost_factor:            223 * runningcostfactor();
+        purchase_running_cost_factor:   223 * 4;
+
+        additional_text:                string(STR_DESC_4, string(STR_USAGE_INTERCITY), string(STR_RELDEC_SLOW, 12), string(STR_COMFORT_HIGH, 256), string(STR_LOADING_VERY_SLOW, 4));
+    }
+}
+
+// End Ikarus_256_1972

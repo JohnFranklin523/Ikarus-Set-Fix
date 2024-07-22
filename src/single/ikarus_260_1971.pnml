@@ -1,10 +1,10 @@
 // Begin Ikarus_260_1971
 
-spriteset (spriteset_ikarus_260_1971_1) {
+spriteset (spriteset_ikarus_260_1971) {
     template1 (8)
 }
 
-spriteset (spriteset_ikarus_260_1971_2) {
+spriteset (spriteset_ikarus_260_1971_loading) {
     template1 (16)
 }
 
@@ -12,16 +12,9 @@ spriteset (spriteset_ikarus_260_1971_purchase) {
     template_purchase1 (26)
 }
 
-switch (FEAT_ROADVEHS, SELF, switch_ikarus_260_1971_cargo_subtype, cargo_subtype) {
-    0: string(STR_LIVERY_1);
-    1: string(STR_LIVERY_2);
-    CB_RESULT_NO_TEXT;
-}
-
-switch (FEAT_ROADVEHS, SELF, switch_ikarus_260_1971_graphics, cargo_subtype) {
-    0: spriteset_ikarus_260_1971_1;
-    1: spriteset_ikarus_260_1971_2;
-    empty_sprites;
+switch (FEAT_ROADVEHS, SELF, switch_ikarus_260_1971_graphics, vehicle_is_stopped) {
+    1: spriteset_ikarus_260_1971_loading;
+    spriteset_ikarus_260_1971;
 }
 
 item (FEAT_ROADVEHS, ikarus_260_1971) {
@@ -60,7 +53,6 @@ item (FEAT_ROADVEHS, ikarus_260_1971) {
     graphics {
         default:                        switch_ikarus_260_1971_graphics;
         purchase:                       spriteset_ikarus_260_1971_purchase;
-        cargo_subtype_text:             switch_ikarus_260_1971_cargo_subtype;
 
         cost_factor:                    69;
         running_cost_factor:            184 * runningcostfactor();

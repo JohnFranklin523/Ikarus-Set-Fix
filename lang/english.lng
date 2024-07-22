@@ -106,8 +106,11 @@ STR_NAME_IKARUS_EAG_E94F            :Ikarus EAG E94F {SILVER}2002
 STR_NAME_IKARUS_EAG_E94LF           :Ikarus EAG E94LF {SILVER}2001
 STR_NAME_IKARUS_EAG_E94G            :Ikarus EAG E94G "Stork" {SILVER}1997
 
-STR_LIVERY_1                :Livery 1
-STR_LIVERY_2                :Livery 2
+STR_BUILD_YEAR_LIVERY       : Livery according to build year
+STR_CURRENT_YEAR_LIVERY     : Livery according to current year
+STR_LIVERY_TO               : Livery until {COMMA}
+STR_LIVERY_FROM             : Livery from {COMMA} onward
+STR_LIVERY_FROM_TO          : Livery from {0:COMMA} to {1:COMMA}
 
 STR_USAGE_LOW_LOCAL         :{BLACK}Usage: {LTBLUE}Low-Traffic Local Routes
 STR_USAGE_LOCAL             :{BLACK}Usage: {LTBLUE}Local Routes

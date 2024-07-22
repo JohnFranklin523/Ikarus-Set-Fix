@@ -1,0 +1,113 @@
+// Begin Ikarus_256_1977
+
+spriteset (spriteset_ikarus_256_1977_to1984) {
+    template1 (197)
+}
+
+spriteset (spriteset_ikarus_256_1977_to1984_loading) {
+    template1 (205)
+}
+
+spriteset (spriteset_ikarus_256_1977_from1984) {
+    template1 (213)
+}
+
+spriteset (spriteset_ikarus_256_1977_from1984_loading) {
+    template1 (221)
+}
+
+spriteset (spriteset_ikarus_256_1977_purchase_to1984) {
+    template_purchase1 (232)
+}
+
+spriteset (spriteset_ikarus_256_1977_purchase_from1984) {
+    template_purchase1 (235)
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_ikarus_256_1977_graphics_to1984, vehicle_is_stopped) {
+    1: spriteset_ikarus_256_1977_to1984_loading;
+    spriteset_ikarus_256_1977_to1984;
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_ikarus_256_1977_graphics_from1984, vehicle_is_stopped) {
+    1: spriteset_ikarus_256_1977_from1984_loading;
+    spriteset_ikarus_256_1977_from1984;
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_ikarus_256_1977_build_year_livery, build_year) {
+    0..1983: switch_ikarus_256_1977_graphics_to1984;
+    switch_ikarus_256_1977_graphics_from1984;
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_ikarus_256_1977_current_year_livery, current_year) {
+    0..1983: switch_ikarus_256_1977_graphics_to1984;
+    switch_ikarus_256_1977_graphics_from1984;
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_ikarus_256_1977_purchase, current_year) {
+    0..1983: spriteset_ikarus_256_1977_purchase_to1984;
+    spriteset_ikarus_256_1977_purchase_from1984;
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_ikarus_256_1977_cargo_subtype, cargo_subtype) {
+    0: string(STR_BUILD_YEAR_LIVERY);
+    1: string(STR_CURRENT_YEAR_LIVERY);
+    2: string(STR_LIVERY_TO, 1984);
+    3: string(STR_LIVERY_FROM, 1984);
+    CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_ikarus_256_1977_graphics, cargo_subtype) {
+    0: switch_ikarus_256_1977_build_year_livery;
+    1: switch_ikarus_256_1977_current_year_livery;
+    2: switch_ikarus_256_1977_graphics_to1984;
+    3: switch_ikarus_256_1977_graphics_from1984;
+}
+
+item (FEAT_ROADVEHS, ikarus_256_1977) {
+    property {
+        // DON'T CHANGE
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH;
+        climates_available:             ALL_CLIMATES;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        refit_cost:                     0;
+        misc_flags:                     bitmask(ROADVEH_FLAG_AUTOREFIT);
+        cost_factor:                    1;
+        running_cost_factor:            1;
+
+        // DON'T CHANGE for non-articulated buses
+        length:                         8;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        default_cargo_type:             PASS;
+        
+        // Change accordingly
+        name:                           string(STR_NAME_IKARUS_256_1977);
+        introduction_date:              date(1971,1,1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   14;
+        reliability_decay:              12;
+
+        power:                          190 hp;
+        weight:                         10 ton;
+        tractive_effort_coefficient:    0.3;
+        speed:                          102 km/h;
+
+        cargo_capacity:                 45;
+        loading_speed:                  4 << param_loading_speed;
+        cargo_age_period:               256 << param_cargo_decay;
+    }
+    graphics {
+        default:                        switch_ikarus_256_1977_graphics;
+        purchase:                       switch_ikarus_256_1977_purchase;
+        cargo_subtype_text:             switch_ikarus_256_1977_cargo_subtype;
+
+        cost_factor:                    96;
+        running_cost_factor:            223 * runningcostfactor();
+        purchase_running_cost_factor:   223 * 4;
+
+        additional_text:                string(STR_DESC_4, string(STR_USAGE_INTERCITY), string(STR_RELDEC_SLOW, 12), string(STR_COMFORT_HIGH, 256), string(STR_LOADING_VERY_SLOW, 4));
+    }
+}
+
+// End Ikarus_256_1977

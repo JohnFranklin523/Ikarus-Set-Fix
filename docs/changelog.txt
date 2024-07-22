@@ -1,5 +1,10 @@
 Ikarus Set 6 Fix Changelog
 =========================
+0.0.3 (2024-07-22)
+-------------------------
+Add: Ikarus 256 (1972, 1977), Ikarus 260 1984 (Local), Ikarus 260 1998, Ikarus 260 CNG 2002, Ikarus 266 1972
+Add: Door animations when loading and unloading
+
 0.0.2 (2024-07-21)
 -------------------------
 Add: Ikarus 260 1984 (Local)

@@ -1,0 +1,65 @@
+// Begin Ikarus_260_Regional_1984
+
+spriteset (spriteset_ikarus_260_regional_1984) {
+    template1 (143)
+}
+
+spriteset (spriteset_ikarus_260_regional_1984_loading) {
+    template1 (151)
+}
+
+spriteset (spriteset_ikarus_260_regional_1984_purchase) {
+    template_purchase1 (161)
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_ikarus_260_regional_1984_graphics, vehicle_is_stopped) {
+    1: spriteset_ikarus_260_regional_1984_loading;
+    spriteset_ikarus_260_regional_1984;
+}
+
+item (FEAT_ROADVEHS, ikarus_260_regional_1984) {
+    property {
+        // DON'T CHANGE
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH;
+        climates_available:             ALL_CLIMATES;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        refit_cost:                     0;
+        misc_flags:                     bitmask(ROADVEH_FLAG_AUTOREFIT);
+        cost_factor:                    1;
+        running_cost_factor:            1;
+
+        // DON'T CHANGE for non-articulated buses
+        length:                         8;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        default_cargo_type:             PASS;
+        
+        // Change accordingly
+        name:                           string(STR_NAME_IKARUS_260_REGIONAL_1984);
+        introduction_date:              date(1983,1,1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   16;
+        reliability_decay:              12;
+
+        power:                          220 hp;
+        weight:                         9 ton;
+        tractive_effort_coefficient:    0.3;
+        speed:                          72 km/h;
+
+        cargo_capacity:                 72;
+        loading_speed:                  9 << param_loading_speed;
+        cargo_age_period:               176 << param_cargo_decay;
+    }
+    graphics {
+        default:                        switch_ikarus_260_regional_1984_graphics;
+        purchase:                       spriteset_ikarus_260_regional_1984_purchase;
+
+        cost_factor:                    97;
+        running_cost_factor:            186 * runningcostfactor();
+        purchase_running_cost_factor:   186 * 4;
+
+        additional_text:                string(STR_DESC_4, string(STR_USAGE_REGIONAL), string(STR_RELDEC_SLOW, 12), string(STR_COMFORT_MEDIUM, 176), string(STR_LOADING_MEDIUM, 9));
+    }
+}
+
+// End Ikarus_260_Regional_1984
