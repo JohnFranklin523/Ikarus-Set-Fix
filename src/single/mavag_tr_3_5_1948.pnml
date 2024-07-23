@@ -1,0 +1,65 @@
+// Begin Mavag_Tr_3_5_1948
+
+spriteset (spriteset_mavag_tr_3_5_1948) {
+    template11 (1148)
+}
+
+spriteset (spriteset_mavag_tr_3_5_1948_loading) {
+    template11 (1156)
+}
+
+spriteset (spriteset_mavag_tr_3_5_1948_purchase) {
+    template_purchase1 (1166)
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_mavag_tr_3_5_1948_graphics, vehicle_is_stopped) {
+    1: spriteset_mavag_tr_3_5_1948_loading;
+    spriteset_mavag_tr_3_5_1948;
+}
+
+item (FEAT_ROADVEHS, mavag_tr_3_5_1948) {
+    property {
+        // DON'T CHANGE
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH;
+        climates_available:             ALL_CLIMATES;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        refit_cost:                     0;
+        misc_flags:                     bitmask(ROADVEH_FLAG_AUTOREFIT);
+        cost_factor:                    1;
+        running_cost_factor:            1;
+
+        // DON'T CHANGE for non-articulated buses
+        length:                         8;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        default_cargo_type:             PASS;
+        
+        // Change accordingly
+        name:                           string(STR_NAME_MAVAG_TR_3_5_1948);
+        introduction_date:              date(1947,1,1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   7;
+        reliability_decay:              28;
+
+        power:                          60 hp;
+        weight:                         5 ton;
+        tractive_effort_coefficient:    0.3;
+        speed:                          62 km/h;
+
+        cargo_capacity:                 34;
+        loading_speed:                  6 << param_loading_speed;
+        cargo_age_period:               112 << param_cargo_decay;
+    }
+    graphics {
+        default:                        switch_mavag_tr_3_5_1948_graphics;
+        purchase:                       spriteset_mavag_tr_3_5_1948_purchase;
+
+        cost_factor:                    28;
+        running_cost_factor:            164 * runningcostfactor();
+        purchase_running_cost_factor:   164 * 4;
+
+        additional_text:                string(STR_DESC_4, string(STR_USAGE_LOW_LOCAL), string(STR_RELDEC_VERY_FAST, 28), string(STR_COMFORT_VERY_LOW, 112), string(STR_LOADING_SLOW, 6));
+    }
+}
+
+// End Mavag_Tr_3_5_1948

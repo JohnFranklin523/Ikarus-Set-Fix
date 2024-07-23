@@ -1,0 +1,65 @@
+// Begin Ikarus_250_1967
+
+spriteset (spriteset_ikarus_250_1967) {
+    template5 (396)
+}
+
+spriteset (spriteset_ikarus_250_1967_loading) {
+    template5 (404)
+}
+
+spriteset (spriteset_ikarus_250_1967_purchase) {
+    template_purchase1 (414)
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_ikarus_250_1967_graphics, vehicle_is_stopped) {
+    1: spriteset_ikarus_250_1967_loading;
+    spriteset_ikarus_250_1967;
+}
+
+item (FEAT_ROADVEHS, ikarus_250_1967) {
+    property {
+        // DON'T CHANGE
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH;
+        climates_available:             ALL_CLIMATES;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        refit_cost:                     0;
+        misc_flags:                     bitmask(ROADVEH_FLAG_AUTOREFIT);
+        cost_factor:                    1;
+        running_cost_factor:            1;
+
+        // DON'T CHANGE for non-articulated buses
+        length:                         8;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        default_cargo_type:             PASS;
+        
+        // Change accordingly
+        name:                           string(STR_NAME_IKARUS_250_1967);
+        introduction_date:              date(1966,1,1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   6;
+        reliability_decay:              26;
+
+        power:                          210 hp;
+        weight:                         11 ton;
+        tractive_effort_coefficient:    0.3;
+        speed:                          106 km/h;
+
+        cargo_capacity:                 51;
+        loading_speed:                  4 << param_loading_speed;
+        cargo_age_period:               240 << param_cargo_decay;
+    }
+    graphics {
+        default:                        switch_ikarus_250_1967_graphics;
+        purchase:                       spriteset_ikarus_250_1967_purchase;
+
+        cost_factor:                    79;
+        running_cost_factor:            281 * runningcostfactor();
+        purchase_running_cost_factor:   281 * 4;
+
+        additional_text:                string(STR_DESC_4, string(STR_USAGE_INTERCITY), string(STR_RELDEC_VERY_FAST, 26), string(STR_COMFORT_HIGH, 240), string(STR_LOADING_VERY_SLOW, 4));
+    }
+}
+
+// End Ikarus_250_1967

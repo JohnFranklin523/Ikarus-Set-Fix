@@ -83,19 +83,19 @@ item (FEAT_ROADVEHS, ikarus_256_1977) {
         
         // Change accordingly
         name:                           string(STR_NAME_IKARUS_256_1977);
-        introduction_date:              date(1971,1,1);
+        introduction_date:              date(1976,1,1);
         model_life:                     VEHICLE_NEVER_EXPIRES;
-        vehicle_life:                   14;
-        reliability_decay:              12;
+        vehicle_life:                   16;
+        reliability_decay:              10;
 
-        power:                          190 hp;
+        power:                          220 hp;
         weight:                         10 ton;
         tractive_effort_coefficient:    0.3;
-        speed:                          102 km/h;
+        speed:                          120 km/h;
 
         cargo_capacity:                 45;
         loading_speed:                  4 << param_loading_speed;
-        cargo_age_period:               256 << param_cargo_decay;
+        cargo_age_period:               272 << param_cargo_decay;
     }
     graphics {
         default:                        switch_ikarus_256_1977_graphics;
@@ -106,7 +106,7 @@ item (FEAT_ROADVEHS, ikarus_256_1977) {
         running_cost_factor:            223 * runningcostfactor();
         purchase_running_cost_factor:   223 * 4;
 
-        additional_text:                string(STR_DESC_4, string(STR_USAGE_INTERCITY), string(STR_RELDEC_SLOW, 12), string(STR_COMFORT_HIGH, 256), string(STR_LOADING_VERY_SLOW, 4));
+        additional_text:                string(STR_DESC_4, string(STR_USAGE_INTERCITY), string(STR_RELDEC_VERY_SLOW, 10), string(STR_COMFORT_HIGH, 272), string(STR_LOADING_VERY_SLOW, 4));
     }
 }
 

@@ -1,0 +1,65 @@
+// Begin Ikarus_254_Tourist_1975
+
+spriteset (spriteset_ikarus_254_tourist_1975) {
+    template2 (300)
+}
+
+spriteset (spriteset_ikarus_254_tourist_1975_loading) {
+    template2 (308)
+}
+
+spriteset (spriteset_ikarus_254_tourist_1975_purchase) {
+    template_purchase2 (318)
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_ikarus_254_tourist_1975_graphics, vehicle_is_stopped) {
+    1: spriteset_ikarus_254_tourist_1975_loading;
+    spriteset_ikarus_254_tourist_1975;
+}
+
+item (FEAT_ROADVEHS, ikarus_254_tourist_1975) {
+    property {
+        // DON'T CHANGE
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH;
+        climates_available:             ALL_CLIMATES;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        refit_cost:                     0;
+        misc_flags:                     bitmask(ROADVEH_FLAG_AUTOREFIT);
+        cost_factor:                    1;
+        running_cost_factor:            1;
+
+        // DON'T CHANGE for non-articulated buses
+        length:                         8;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        default_cargo_type:             PASS;
+        
+        // Change accordingly
+        name:                           string(STR_NAME_IKARUS_254_TOURIST_1975);
+        introduction_date:              date(1974,1,1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   8;
+        reliability_decay:              20;
+
+        power:                          280 hp;
+        weight:                         13 ton;
+        tractive_effort_coefficient:    0.3;
+        speed:                          122 km/h;
+
+        cargo_capacity:                 36;
+        loading_speed:                  3 << param_loading_speed;
+        cargo_age_period:               320 << param_cargo_decay;
+    }
+    graphics {
+        default:                        switch_ikarus_254_tourist_1975_graphics;
+        purchase:                       spriteset_ikarus_254_tourist_1975_purchase;
+
+        cost_factor:                    130;
+        running_cost_factor:            263 * runningcostfactor();
+        purchase_running_cost_factor:   263 * 4;
+
+        additional_text:                string(STR_DESC_4, string(STR_USAGE_INTERNATIONAL), string(STR_RELDEC_MEDIUM, 20), string(STR_COMFORT_VERY_HIGH, 320), string(STR_LOADING_VERY_SLOW, 3));
+    }
+}
+
+// End Ikarus_254_Tourist_1975

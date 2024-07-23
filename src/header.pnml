@@ -15,10 +15,10 @@ grf {
             max_value: 3;
             def_value: 1;
             names: {
-                0: string(STR_PARAM_NUM, 50);
-                1: string(STR_PARAM_NUM, 100);
-                2: string(STR_PARAM_NUM, 200);
-                3: string(STR_PARAM_NUM, 400);
+                0: string(STR_PARAM_NUM, 100);
+                1: string(STR_PARAM_NUM, 200);
+                2: string(STR_PARAM_NUM, 400);
+                3: string(STR_PARAM_NUM, 800);
             };
         }
     }
@@ -74,7 +74,7 @@ grf {
 }
 
 basecost {
-    PR_BUILD_VEHICLE_ROAD: param_purchase_cost - 4;
+    PR_BUILD_VEHICLE_ROAD: param_purchase_cost - 2;
     PR_RUNNING_ROADVEH: param_running_cost  - 5;
  }
 

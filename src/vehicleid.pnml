@@ -20,7 +20,7 @@ item (FEAT_ROADVEHS, ikarus_280_1998, 144) {}
 item (FEAT_ROADVEHS, ikarus_280_cng_1999, 145) {}
 item (FEAT_ROADVEHS, ikarus_210_1969, 146) {}
 item (FEAT_ROADVEHS, ikarus_211_1975, 147) {}
-item (FEAT_ROADVEHS, ikarus_212_1975, 148) {}
+item (FEAT_ROADVEHS, ikarus_212_1976, 148) {}
 item (FEAT_ROADVEHS, ikarus_280_regional_1971, 149) {}
 item (FEAT_ROADVEHS, ikarus_280_regional_1984, 150) {}
 item (FEAT_ROADVEHS, ikarus_292_1988, 151) {}

@@ -1,0 +1,65 @@
+// Begin ikarus_211_1975
+
+spriteset (spriteset_ikarus_211_1975) {
+    template8 (800)
+}
+
+spriteset (spriteset_ikarus_211_1975_loading) {
+    template8 (808)
+}
+
+spriteset (spriteset_ikarus_211_1975_purchase) {
+    template_purchase1 (818)
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_ikarus_211_1975_graphics, vehicle_is_stopped) {
+    1: spriteset_ikarus_211_1975_loading;
+    spriteset_ikarus_211_1975;
+}
+
+item (FEAT_ROADVEHS, ikarus_211_1975) {
+    property {
+        // DON'T CHANGE
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH;
+        climates_available:             ALL_CLIMATES;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        refit_cost:                     0;
+        misc_flags:                     bitmask(ROADVEH_FLAG_AUTOREFIT);
+        cost_factor:                    1;
+        running_cost_factor:            1;
+
+        // DON'T CHANGE for non-articulated buses
+        length:                         6;  // For Ikarus 210 1969, Ikarus 211 1975, Ikarus 212 1976
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        default_cargo_type:             PASS;
+        
+        // Change accordingly
+        name:                           string(STR_NAME_IKARUS_211_1975);
+        introduction_date:              date(1974,1,1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   18;
+        reliability_decay:              11;
+
+        power:                          120 hp;
+        weight:                         7 ton;
+        tractive_effort_coefficient:    0.3;
+        speed:                          90 km/h;
+
+        cargo_capacity:                 50;
+        loading_speed:                  7 << param_loading_speed;
+        cargo_age_period:               192 << param_cargo_decay;
+    }
+    graphics {
+        default:                        switch_ikarus_211_1975_graphics;
+        purchase:                       spriteset_ikarus_211_1975_purchase;
+
+        cost_factor:                    77;
+        running_cost_factor:            171 * runningcostfactor();
+        purchase_running_cost_factor:   171 * 4;
+
+        additional_text:                string(STR_DESC_4, string(STR_USAGE_LOW_REGIONAL), string(STR_RELDEC_VERY_SLOW, 11), string(STR_COMFORT_MEDIUM, 192), string(STR_LOADING_SLOW, 7));
+    }
+}
+
+// End ikarus_211_1975
