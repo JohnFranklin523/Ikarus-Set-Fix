@@ -1,0 +1,65 @@
+// Begin Mavaut_ikarus_556_1968
+
+spriteset (spriteset_mavaut_ikarus_556_1968) {
+    template17 (1322)
+}
+
+spriteset (spriteset_mavaut_ikarus_556_1968_loading) {
+    template17 (1330)
+}
+
+spriteset (spriteset_mavaut_ikarus_556_1968_purchase) {
+    template_purchase3 (1340)
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_mavaut_ikarus_556_1968_graphics, vehicle_is_stopped) {
+    1: spriteset_mavaut_ikarus_556_1968_loading;
+    spriteset_mavaut_ikarus_556_1968;
+}
+
+item (FEAT_ROADVEHS, mavaut_ikarus_556_1968) {
+    property {
+        // DON'T CHANGE
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH;
+        climates_available:             ALL_CLIMATES;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        refit_cost:                     0;
+        misc_flags:                     bitmask(ROADVEH_FLAG_AUTOREFIT);
+        cost_factor:                    1;
+        running_cost_factor:            1;
+
+        // DON'T CHANGE for non-articulated buses
+        length:                         8;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        default_cargo_type:             PASS;
+        
+        // Change accordingly
+        name:                           string(STR_NAME_MAVAUT_IKARUS_556_1968);
+        introduction_date:              date(1967,1,1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   4;
+        reliability_decay:              48;
+
+        power:                          140 hp;
+        weight:                         12 ton;
+        tractive_effort_coefficient:    0.3;
+        speed:                          68 km/h;
+
+        cargo_capacity:                 76;
+        loading_speed:                  7 << param_loading_speed;
+        cargo_age_period:               192 << param_cargo_decay;
+    }
+    graphics {
+        default:                        switch_mavaut_ikarus_556_1968_graphics;
+        purchase:                       spriteset_mavaut_ikarus_556_1968_purchase;
+
+        cost_factor:                    37;
+        running_cost_factor:            188 * runningcostfactor();
+        purchase_running_cost_factor:   188 * 4;
+
+        additional_text:                string(STR_DESC_4, string(STR_USAGE_EXPERIMENTAL), string(STR_RELDEC_VERY_FAST, 48), string(STR_COMFORT_MEDIUM, 192), string(STR_LOADING_SLOW, 7));
+    }
+}
+
+// End Mavaut_ikarus_556_1968

@@ -22,5 +22,8 @@
 #include "src/single/ikarus_212_1976.pnml"
 #include "src/single/mavag_tr_5_1947.pnml"
 #include "src/single/mavag_tr_3_5_1948.pnml"
+#include "src/single/ikarus_30_1951.pnml"
+#include "src/single/ikarus_556_1964.pnml"
+#include "src/single/mavaut_ikarus_556_1968.pnml"
 
 #include "src/vehiclesort.pnml"
