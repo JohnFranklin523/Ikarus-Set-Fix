@@ -24,7 +24,7 @@ item (FEAT_ROADVEHS, ikarus_256_1998) {
         climates_available:             ALL_CLIMATES;
         running_cost_base:              RUNNING_COST_ROADVEH;
         refit_cost:                     0;
-        misc_flags:                     bitmask(ROADVEH_FLAG_AUTOREFIT);
+        misc_flags:                     bitmask(ROADVEH_FLAG_2CC, ROADVEH_FLAG_AUTOREFIT);
         cost_factor:                    1;
         running_cost_factor:            1;
 
